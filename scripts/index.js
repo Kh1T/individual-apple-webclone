@@ -19,3 +19,6 @@ updateImageSource();
 // Event listener for window resize to update image source
 window.addEventListener('resize', updateImageSource);
 
+
+
+
