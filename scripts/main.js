@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// On click blue highlight JS
 document.addEventListener('DOMContentLoaded', function() {
     const accordionHeaders = document.querySelectorAll('.accordion-header');
 
@@ -68,4 +69,64 @@ window.addEventListener('scroll', () => {
     navbar.style.opacity = "1";
     }
     });
+
+//Second Carousel JS
+const scrollers = document.querySelectorAll(".scroller");
+    // If a user hasn't opted in for recuded motion, then we add the animation
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
+    }
+
+    function addAnimation() {
+    scrollers.forEach((scroller) => {
+        // add data-animated="true" to every `.scroller` on the page
+        scroller.setAttribute("data-animated", true);
+
+        // Make an array from the elements within `.scroller-inner`
+        const scrollerInner = scroller.querySelector(".scroller__inner");
+        const scrollerContent = Array.from(scrollerInner.children);
+
+        // For each item in the array, clone it
+        // add aria-hidden to it
+        // add it into the `.scroller-inner`
+        scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true);
+        duplicatedItem.setAttribute("aria-hidden", true);
+        scrollerInner.appendChild(duplicatedItem);
+        });
+    });
+    }
+
+// //Start & Pause Js
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.getElementById('toggleBtn');
+    const scroller = document.querySelector('.scroller__inner');
+    const svgicon = document.getElementById('svgIcon')
+
+    // Function to toggle the 'animate' class and adjust animation properties
+    function toggleAnimation() {
+        if (scroller.classList.contains('animate')) {
+            // Pause the animation
+            scroller.classList.remove('animate');
+            scroller.style.animationPlayState = 'paused';
+            svgicon.src = '/assets/icons/play.svg'
+            svgicon.classList.add('h-[10px]');
+        } else {
+            // Resume the animation
+            scroller.classList.add('animate');
+            scroller.style.animationPlayState = 'running';
+            scroller.style.animationDuration = '60s';
+            svgicon.src = '/assets/icons/pause-filled.svg'
+            svgicon.classList.remove('h-[10px]');
+        }
+    }
+
+    // Event listener for the toggle button click
+    toggleBtn.addEventListener('click', toggleAnimation);
+});
+
+
+
+
+
 
