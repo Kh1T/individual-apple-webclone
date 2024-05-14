@@ -126,6 +126,22 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Drop down navbar JS
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdownText = document.getElementById('dropdownText');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    const dropdownContent = dropdownMenu.querySelector('.dropdown-content');
+
+    dropdownText.addEventListener('mouseenter', function () {
+        // Expanding dropdown
+        dropdownMenu.style.height = dropdownContent.scrollHeight + 'px';
+    });
+
+    dropdownText.addEventListener('mouseleave', function () {
+        // Collapsing dropdown
+        dropdownMenu.style.height = '0px';
+    });
+});
 
 
 

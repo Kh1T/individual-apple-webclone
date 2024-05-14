@@ -16,7 +16,7 @@ export class NavBar extends HTMLElement {
                 
             </a>
             <ul class="flex w-full  gap-6 justify-between max-[830px]:hidden min-[830px]:px-5 items-center">
-                <a href="#">Store</a>
+                <a href="#" class='relative'>Store</a>
                 <a href="#">Mac</a>
                 <a href="#">iPad</a>
                 <a href="#">iPhone</a>
@@ -24,7 +24,7 @@ export class NavBar extends HTMLElement {
                 <a href="#">Airpod</a>
                 <a href="#">TV & Home</a>
                 <a href="#">Entertainment</a>
-                <a href="#">Acessories</a>
+                <a href="/pages/acessories-page.html">Acessories</a>
                 <a href="./support-page.html">Support</a>
     
             </ul>
