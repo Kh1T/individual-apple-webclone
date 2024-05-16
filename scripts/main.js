@@ -128,13 +128,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Drop down navbar JS
 document.addEventListener('DOMContentLoaded', function () {
+
     const dropdownText = document.getElementById('dropdownText');
     const dropdownMenu = document.getElementById('dropdownMenu');
+    console.log(dropdownMenu)
     const dropdownContent = dropdownMenu.querySelector('.dropdown-content');
 
-    dropdownText.addEventListener('mouseenter', function () {
+    dropdownMenu.addEventListener('mouseenter', function () {
+        console.log('kel')
         // Expanding dropdown
-        dropdownMenu.style.height = dropdownContent.scrollHeight + 'px';
+        dropdownMenu.classList.add('max-h-[500px]');
+        // dropdownMenu.style.height = dropdownContent.scrollHeight + 'px';
     });
 
     dropdownText.addEventListener('mouseleave', function () {

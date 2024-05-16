@@ -17,7 +17,7 @@
         </a>
         <ul class="flex w-full  gap-6 justify-between max-[830px]:hidden min-[830px]:px-5 items-center">
             <div class="flex flex-col">
-                <a href="#" class='relative'>Store</a>
+                <a href="#" class='relative' id="">Store</a>
                 <div class="flex dropdown  w-full h-0  dropdown-content justify-center bg-zinc-50 
                         absolute top-12 left-0 max-[830px]:w-screen transition-all ease-in-out duration-200 overflow-hidden"
                         id="dropdownMenu">
@@ -81,7 +81,28 @@
             
         </ul>
     </nav>
-    <script src="/scripts/main.js"></script>
-    <script src="/scripts/Script.js" type="module"></script>
+    <!-- <script src="/scripts/main.js"></script> -->
+    <!-- <script src="/scripts/Script.js" type="module"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+const dropdownText = document.getElementById('dropdownText');
+const dropdownMenu = document.getElementById('dropdownMenu');
+console.log(dropdownMenu)
+const dropdownContent = dropdownMenu.querySelector('.dropdown-content');
+
+dropdownMenu.addEventListener('mouseenter', function () {
+    console.log('kel')
+    // Expanding dropdown
+    dropdownMenu.classList.add('max-h-[500px]');
+    // dropdownMenu.style.height = dropdownContent.scrollHeight + 'px';
+});
+
+dropdownText.addEventListener('mouseleave', function () {
+    // Collapsing dropdown
+    dropdownMenu.style.height = '0px';
+});
+});
+    </script>
 </body>
 </html>
