@@ -6,9 +6,25 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+    <style>
+   
+   .dropdown {
+    transition: max-height 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    opacity: 0;
+    max-height: 0;
+    width: 100vw;
+    overflow: hidden;
+}
+.dropdown-content {
+            max-width: 846px;
+            margin: 0 auto;
+        }
+
+    </style>
 <body>
+
     <section class="max-[830px]:w-screen flex  justify-center
-    bg-zinc-100 fixed w-full top-0 z-10 transition-all duration-300" id="navbar">
+    bg-zinc-100 fixed  w-full top-0 z-10 transition-all duration-300" id="navbar">
     <nav class= "flex max-w-[1080px] max-[830px]:justify-between max-[830px]:w-screen flex-row bg-transparent h-[48px] item-center 
     min-[830px]:justify-between text-xs " id='navbar'>
         <a href="/pages/main.html">
@@ -16,26 +32,25 @@
             
         </a>
         <ul class="flex w-full  gap-6 justify-between max-[830px]:hidden min-[830px]:px-5 items-center">
-            <div class="flex flex-col">
-                <a href="#" class='relative' id="">Store</a>
-                <div class="flex dropdown  w-full h-0  dropdown-content justify-center bg-zinc-50 
-                        absolute top-12 left-0 max-[830px]:w-screen transition-all ease-in-out duration-200 overflow-hidden"
-                        id="dropdownMenu">
-                    <div class="flex flex-row max-w-[846px] py-14 w-screen dropdown-content" >
-                        <div class="pr-24 ">
-                            <span class="flex h-5 text-xs text-slate-400">Shop</span>
-                            <div class="grid text-3xl font-medium space-y-1 ">
+            <div class="flex flex-col ">
+                <a href="#" class="relative" id="dropdownText">Store</a>
+                <div class="flex justify-center bg-zinc-50 absolute top-12 left-0
+                max-[830px]:w-screen dropdown " id="dropdownMenu">
+                    <div class="dropdown-content flex flex-row py-14 w-screen ml- justify-center">
+                        <div class="pr-24">
+                            <span class="flex h-5 w-[120px] text-xs text-slate-400">Shop</span>
+                            <div class="grid text-3xl font-medium space-y-1 pb-20">
                                 <a href="#">Shop the Latest</a>
                                 <a href="#">Mac</a>
                                 <a href="#">iPad</a>
                                 <a href="#">iPhone</a>
-                                <a href="#">Apple watch</a>
+                                <a href="#">Apple Watch</a>
                                 <a href="#">Apple Vision Pro</a>
                                 <a href="#">Accessories</a>
                             </div>
                         </div>
-                        <div class="pr-14 ">
-                            <span class="flex h-5 text-xs text-slate-400">Quick Links</span>
+                        <div class="pr-14">
+                            <span class="flex w-[120px] h-5 text-xs text-slate-400">Quick Links</span>
                             <div class="grid text-sm font-medium space-y-1">
                                 <a href="#">Find a Store</a>
                                 <a href="#">Order Status</a>
@@ -43,8 +58,8 @@
                                 <a href="#">Financing</a>
                             </div>
                         </div>
-                        <div class="pr-14 ">
-                            <span class="flex h-5 text-xs text-slate-400">Shop special Stores</span>
+                        <div class="pr-14">
+                            <span class="flex h-5 w-[120px] text-xs text-slate-400">Shop Special Stores</span>
                             <div class="grid text-sm font-medium space-y-1">
                                 <a href="#">Certified Refurbished</a>
                                 <a href="#">Education</a>
@@ -54,9 +69,10 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
+            
+            
             <a href="#">Mac</a>
             <a href="#">iPad</a>
             <a href="#">iPhone</a>
@@ -84,25 +100,35 @@
     <!-- <script src="/scripts/main.js"></script> -->
     <!-- <script src="/scripts/Script.js" type="module"></script> -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', (event) => {
+    const dropdownText = document.getElementById('dropdownText');
+    const dropdownMenu = document.getElementById('dropdownMenu');
 
-const dropdownText = document.getElementById('dropdownText');
-const dropdownMenu = document.getElementById('dropdownMenu');
-console.log(dropdownMenu)
-const dropdownContent = dropdownMenu.querySelector('.dropdown-content');
+    dropdownText.addEventListener('mouseenter', () => {
+        dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + 'px';
+        dropdownMenu.style.opacity = '1';
+    });
 
-dropdownMenu.addEventListener('mouseenter', function () {
-    console.log('kel')
-    // Expanding dropdown
-    dropdownMenu.classList.add('max-h-[500px]');
-    // dropdownMenu.style.height = dropdownContent.scrollHeight + 'px';
+    dropdownText.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            if (!dropdownMenu.matches(':hover')) {
+                dropdownMenu.style.maxHeight = '0';
+                dropdownMenu.style.opacity = '0';
+            }
+        }, 200); // Adjust delay to suit your needs
+    });
+
+    dropdownMenu.addEventListener('mouseleave', () => {
+        dropdownMenu.style.maxHeight = '0';
+        dropdownMenu.style.opacity = '0';
+    });
+
+    dropdownMenu.addEventListener('mouseenter', () => {
+        dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + 'px';
+        dropdownMenu.style.opacity = '1';
+    });
 });
 
-dropdownText.addEventListener('mouseleave', function () {
-    // Collapsing dropdown
-    dropdownMenu.style.height = '0px';
-});
-});
     </script>
 </body>
 </html>
