@@ -3,26 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>Document</title>
 </head>
-    <style>
-   
-   .dropdown {
-    transition: max-height 0.2s ease-in-out, opacity 0.2s ease-in-out;
-    opacity: 0;
-    max-height: 0;
-    width: 100vw;
-    overflow: hidden;
-}
-.dropdown-content {
-            max-width: 846px;
-            margin: 0 auto;
-        }
-
-    </style>
 <body>
-
+    
     <section class="max-[830px]:w-screen flex  justify-center
     bg-zinc-100 fixed  w-full top-0 z-10 transition-all duration-300" id="navbar">
     <nav class= "flex max-w-[1080px] max-[830px]:justify-between max-[830px]:w-screen flex-row bg-transparent h-[48px] item-center 
@@ -36,38 +23,13 @@
                 <a href="#" class="relative" id="dropdownText">Store</a>
                 <div class="flex justify-center bg-zinc-50 absolute top-12 left-0
                 max-[830px]:w-screen dropdown " id="dropdownMenu">
-                    <div class="dropdown-content flex flex-row py-14 w-screen ml- justify-center">
-                        <div class="pr-24">
-                            <span class="flex h-5 w-[120px] text-xs text-slate-400">Shop</span>
-                            <div class="grid text-3xl font-medium space-y-1 pb-20">
-                                <a href="#">Shop the Latest</a>
-                                <a href="#">Mac</a>
-                                <a href="#">iPad</a>
-                                <a href="#">iPhone</a>
-                                <a href="#">Apple Watch</a>
-                                <a href="#">Apple Vision Pro</a>
-                                <a href="#">Accessories</a>
+                    <div class="dropdown-content flex flex-row py-14 w-screen justify-center pr-14">
+                        <div class="dropdown" id="dropdownMenu">
+                            <div class="dropdown-content">
+                                <!-- Dropdown content goes here -->
                             </div>
                         </div>
-                        <div class="pr-14">
-                            <span class="flex w-[120px] h-5 text-xs text-slate-400">Quick Links</span>
-                            <div class="grid text-sm font-medium space-y-1">
-                                <a href="#">Find a Store</a>
-                                <a href="#">Order Status</a>
-                                <a href="#">Apple Trade In</a>
-                                <a href="#">Financing</a>
-                            </div>
-                        </div>
-                        <div class="pr-14">
-                            <span class="flex h-5 w-[120px] text-xs text-slate-400">Shop Special Stores</span>
-                            <div class="grid text-sm font-medium space-y-1">
-                                <a href="#">Certified Refurbished</a>
-                                <a href="#">Education</a>
-                                <a href="#">Business</a>
-                                <a href="#">Veteran and Military</a>
-                                <a href="#">Government</a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -97,38 +59,81 @@
             
         </ul>
     </nav>
-    <!-- <script src="/scripts/main.js"></script> -->
-    <!-- <script src="/scripts/Script.js" type="module"></script> -->
+    
     <script>
-document.addEventListener('DOMContentLoaded', (event) => {
-    const dropdownText = document.getElementById('dropdownText');
-    const dropdownMenu = document.getElementById('dropdownMenu');
+        // Function to initialize the dropdown component
+function initializeDropdown(containerId, dropdownData) {
+    const container = document.getElementById(containerId);
+    const dropdownContent = container.querySelector('.dropdown-content');
 
-    dropdownText.addEventListener('mouseenter', () => {
-        dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + 'px';
-        dropdownMenu.style.opacity = '1';
-    });
+    // Clear existing content
+    dropdownContent.innerHTML = '';
 
-    dropdownText.addEventListener('mouseleave', () => {
-        setTimeout(() => {
-            if (!dropdownMenu.matches(':hover')) {
-                dropdownMenu.style.maxHeight = '0';
-                dropdownMenu.style.opacity = '0';
-            }
-        }, 200); // Adjust delay to suit your needs
-    });
+    // Populate dropdown content
+    dropdownData.forEach(category => {
+        const categoryElement = document.createElement('div');
+        categoryElement.classList.add('category');
 
-    dropdownMenu.addEventListener('mouseleave', () => {
-        dropdownMenu.style.maxHeight = '0';
-        dropdownMenu.style.opacity = '0';
-    });
+        const categoryTitle = document.createElement('span');
+        categoryTitle.classList.add('category-title');
+        categoryTitle.textContent = category.title;
 
-    dropdownMenu.addEventListener('mouseenter', () => {
-        dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + 'px';
-        dropdownMenu.style.opacity = '1';
+        const linksContainer = document.createElement('div');
+        linksContainer.classList.add('links-container');
+
+        category.links.forEach(link => {
+            const linkElement = document.createElement('a');
+            linkElement.href = link.url;
+            linkElement.textContent = link.label;
+            linksContainer.appendChild(linkElement);
+        });
+
+        categoryElement.appendChild(categoryTitle);
+        categoryElement.appendChild(linksContainer);
+        dropdownContent.appendChild(categoryElement);
     });
-});
+}
+
+// Sample dropdown data
+const dropdownData = [
+    {
+        title: 'Shop',
+        links: [
+            { label: 'Shop the Latest', url: '#' },
+            { label: 'Mac', url: '#' },
+            { label: 'iPad', url: '#' },
+            { label: 'iPhone', url: '#' },
+            { label: 'Apple Watch', url: '#' },
+            { label: 'Apple Vision Pro', url: '#' },
+            { label: 'Accessories', url: '#' }
+        ]
+    },
+    {
+        title: 'Quick Links',
+        links: [
+            { label: 'Find a Store', url: '#' },
+            { label: 'Order Status', url: '#' },
+            { label: 'Apple Trade In', url: '#' },
+            { label: 'Financing', url: '#' }
+        ]
+    },
+    {
+        title: 'Shop Special Stores',
+        links: [
+            { label: 'Certified Refurbished', url: '#' },
+            { label: 'Education', url: '#' },
+            { label: 'Business', url: '#' },
+            { label: 'Veteran and Military', url: '#' },
+            { label: 'Government', url: '#' }
+        ]
+    }
+];
+
+// Initialize the dropdown component
+initializeDropdown('dropdownMenu', dropdownData);
 
     </script>
+        <script src="../accessories-page/components/index.js"></script>
+
 </body>
 </html>
