@@ -32,7 +32,7 @@
         </div>
     </section>
 
-    <section class="max-w-screen relative flex flex-col  items-center border py-10 border-blue-500">
+    <section class="w-screen-md relative flex flex-col  items-center border py-10 border-blue-500">
         <div class="flex gap-10 pb-6 border-b-2">
             <a href="#"><button id="product" class="underline text-xl font-extralight underline-offset-[30px]">Browse by Product</button></a>
             <a href="#"><button id="category" class="text-xl font-extralight underline-offset-[30px]">Browse by Catergory</button></a>
@@ -44,16 +44,20 @@
     </section>
 
     <section class="max-w-screen flex flex-col items-center text-center">
-        <h2 class="text-2xl font-medium py-5">Featurred iPhone Accessories</h2>
-        <div class="w-screen flex flex-col items-center my-5 bg-zinc-100">
-                <img src="../assets/accessories/pinwheel1-1.png">
-
-            <span class="pt-5 my-3">${color}</span>
-            <a href="#" class="h-20 text-lg font-medium">${title}</a>
-            <span class="py-10">${price}</span>
-
+        <h2 class="text-2xl font-medium pt-5">Featurred iPhone Accessories</h2>
+        <div>
+            <!-- <div class="w-screen flex flex-col items-center my-5 bg-zinc-100">
+                    <img src="../assets/accessories/pinwheel1-1.png">
+    
+                <span class="pt-5 my-3">${color}</span>
+                <a href="#" class="h-20 text-lg font-medium">${title}</a>
+                <span class="py-10">${price}</span>
+    
+            </div> -->
+            <div id="pinwheel-carousel"></div>
+            <a href="#" class="text-blue-500 ">Shop all iPhone accessories ></a>
         </div>
-        <a href="#" class="text-blue-500">Shop all iPhone accessories ></a>
+
     </section>
     
     <!-- <script src="/scripts/Script.js" type="module"></script> -->
@@ -61,5 +65,6 @@
     <script src="/scripts/Script.js" type="module"></script>
     <script src="../scripts/accessories/components/tab-product.js"></script>
     <script src="../scripts/accessories/index.js"></script>
+    <script src="../scripts/accessories/components/pinwheel.js"></script>
 </body>
 </html>
