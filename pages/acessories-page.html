@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <navbar-component></navbar-component>
+
+    <section class="max-w-screen flex flex-col items-center">
+        <img class="relative hidden md:block" src="../assets/accessories/accessory-header.png">
+        <img class="relative md:hidden pt-10 bg-center object-cover size-[500px]" src="../assets/accessories/accessory-header-sm.png">
+        <div class="absolute top-[8%] md:top-[13%] md:right-[13%] text-lg text-center md:text-start space-y-5">
+            <h2 class="text-4xl font-semibold "> Mix. Match. MagSafe.</h2>
+            <p class="px-16">
+                Snap on a case, wallet, or wireless charger.
+            </p>
+            <p class="text-blue-500 ">Shop MagSafe > </p>
+        </div>
+    </section>
+
+    <section class="max-w-screen relative flex flex-col  items-center border border-yellow-500 pt-20">
+        <span class="text-2xl font-medium w-4/5 text-center">Find the accessories you’re looking for.</span>
+        <div>
+
+        </div>
+        <div class="relative">
+            <input class="border w-96 md:w-full border-black pl-10 pr-20 md:px-10 py-5 rounded-xl flex text-start text-lg" type="text"  placeholder="Search accessories">
+            <img class="size-7 absolute top-5  ml-2" src="../assets/icons/search-gray.svg"></img>
+        </div>
+    </section>
+
+    <section class="max-w-screen relative flex flex-col  items-center border py-10 border-blue-500">
+        <div class="flex gap-10 pb-6 border-b-2">
+            <a href="#"><button id="product" class="underline text-xl font-extralight underline-offset-[30px]">Browse by Product</button></a>
+            <a href="#"><button id="category" class="text-xl font-extralight underline-offset-[30px]">Browse by Catergory</button></a>
+        </div>
+        <div class=" overflow-hidden transition-all duration-500 ease-in-out" id="product-container"></div>
+        <div class=" overflow-hidden hidden transition-all duration-500 ease-in-out" id="category-container"></div>
+        <button id="see-all-btn" class="text-blue-500">Show All +</button>
+
+    </section>
+
+    <section class="max-w-screen flex flex-col items-center text-center">
+        <h2 class="text-2xl font-medium py-5">Featurred iPhone Accessories</h2>
+        <div class="w-screen flex flex-col items-center my-5 bg-zinc-100">
+                <img src="../assets/accessories/pinwheel1-1.png">
+
+            <span class="pt-5 my-3">${color}</span>
+            <a href="#" class="h-20 text-lg font-medium">${title}</a>
+            <span class="py-10">${price}</span>
+
+        </div>
+        <a href="#" class="text-blue-500">Shop all iPhone accessories ></a>
+    </section>
+    
+    <!-- <script src="/scripts/Script.js" type="module"></script> -->
+    <script src="../pages/accessories-page/components/index.js"></script>
+    <script src="/scripts/Script.js" type="module"></script>
+    <script src="../scripts/accessories/components/tab-product.js"></script>
+    <script src="../scripts/accessories/index.js"></script>
+</body>
+</html>
