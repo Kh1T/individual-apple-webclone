@@ -12,21 +12,22 @@
 
     <!-- Container iphone 15-->
     <section>
-    <div class="flex flex-col pt-10 bg-black">
-        <div class="flex flex-col pt-3 text-center items-center ">
-            
-            <picture>
-                <source srcset="/assets/hero-1/hero-iphone15pro-black-size-small.jpg" media="(max-width:640px)">
-                <source srcset="/assets/hero-1/hero_iphone15pro_black_lg-size.png" media="(max-width:768px)">
-                <img class="h-[500px] md:h-[490px] xl:h-[580px]w-full object-cover " src="/assets/hero-1/hero-iphone15pro-black-long-width.jpg">
-            </picture>
+        <div class="flex flex-col pt-10 bg-black">
+            <div class="flex flex-col pt-3 text-center items-center ">
+                
+                <picture>
+                    <source srcset="/assets/hero-1/hero-iphone15pro-black-size-small.jpg" media="(max-width:640px)">
+                    <source srcset="/assets/hero-1/hero_iphone15pro_black_lg-size.png" media="(max-width:768px)">
+                    <img class="h-[500px] md:h-[490px] xl:h-[580px]w-full object-cover " src="/assets/hero-1/hero-iphone15pro-black-long-width.jpg">
+                </picture>
 
-            <div class="absolute pt-6">
-                <h2 class="text-white text-5xl pb-2 mb-2 ">iPhone 15 Pro</h2>
-                <p class="text-white mb-5">Titanium. So strong. So light. So Pro.</p>
-                <div class="grid-flow-col   ">
-                    <button type="button" class="h-9 text-white bg-blue-500   font-light rounded-full text-[14px] px-5  mx-0 text-center me-2 mb-2">Learn more</button>
-                    <button type="button" class="h-9 text-blue-500 border border-blue-500 font-light rounded-full text-[14px] px-5 mx-0 text-center me-2 mb-2">Buy</button>
+                <div class="absolute pt-6">
+                    <h2 class="text-white text-5xl pb-2 mb-2 ">iPhone 15 Pro</h2>
+                    <p class="text-white mb-5">Titanium. So strong. So light. So Pro.</p>
+                    <div class="grid-flow-col   ">
+                        <button type="button" class="h-9 text-white bg-blue-500   font-light rounded-full text-[14px] px-5  mx-0 text-center me-2 mb-2">Learn more</button>
+                        <button type="button" class="h-9 text-blue-500 border border-blue-500 font-light rounded-full text-[14px] px-5 mx-0 text-center me-2 mb-2">Buy</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -50,6 +51,7 @@
                     <img class="h-[500px] md:h-[490px] xl:h-[580px]w-full object-cover " src="/assets/hero-1/hero-iphone15-white-long-width.jpg">
                 </picture>
             </div>
+        </div>
     </section>
     <!-- homepage-section collection-module -->
     <section class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-3 md:px-3 ">  
@@ -89,8 +91,8 @@
                     <button type="button" class="h-9 text-white bg-blue-500   font-light rounded-full text-[14px] px-5  mx-0 text-center me-2 mb-2">Learn more</button>
                     <button type="button" class="h-9 text-blue-500 border border-blue-500 font-light rounded-full text-[14px] px-5 mx-0 text-center me-2 mb-2">Buy</button>
                 </div>
-            </div class="h-[500px] lg:h-[490px]">
-                <img  class=" flex mt-2 md:mt-3 lg:mt-0 md:pt-0 h-full  bg-center object-cover lg:h-[490px]" src="/assets/hero-1/promo-macbook-air-md-size.png">
+            </div >
+                <img  class=" flex mt-2 md:mt-3 lg:mt-0 md:pt-0  bg-center object-cover h-[500px] lg:h-[490px]" src="/assets/hero-1/promo-macbook-air-md-size.png">
             </div>
         </div>
 
@@ -250,27 +252,9 @@
 </div>
 
     <!-- Second Carousel -->
-    <style>
-        @keyframes scroll {
-        to {
-            transform: translate(calc(-50% - 0.5rem));
-        }
-    }
-    </style>
     <section class="grid place-content-center bg-white min-h-[25vh] pt-[3%]">
-        <div class="scroller max-w-[px] pt-5 overflow-hidden " 
-            style="  
-            
-            --_animation-direction: forwards; 
-            --_animation-duration: 60s;
-            
-            ">
-            <div class="scroller__inner animate flex flex-nowrap gap-4 h-[180px] w-max"
-                style="
-
-                    animation: scroll var(--_animation-duration) var(--_animation-play-state, running)
-                    var(--_animation-direction, forwards) linear infinite;
-                    ">
+        <div class="scroller max-w-[px] pt-5 overflow-hidden ">
+            <div class="scroller__inner animate flex flex-nowrap gap-4 h-[180px] w-max">
                 <img src="/assets/carousel/sc-iverson-417x236.jpg" alt="" />
                 <img src="/assets/carousel/sc-hellokitty-417x236 .jpg" alt="" />
                 <div class="flex justify-center items-center w-[417px] bg-[#dedede]">
@@ -281,8 +265,6 @@
                     <img class="rounded-xl h-[150px]" src="/assets/carousel/sc-small-r-Classical-131x131SC.DNC01.jpg">
                 </div>
                 <img src="/assets/carousel/sc-gregg-834x472.jpg" alt="" />
-
-                
             </div>
         </div>
     </section>
@@ -303,9 +285,9 @@
         <div class="justify-center flex">
             <ul class="grid  text-zinc-500 mx-3 pb-5 space-y-4 max-w-screen-lg text-xs">
         
-                <li href="#" ><span class="grid grid-cols-1">1. Trade-in values will vary based on the condition, year, and configuration of your eligible trade-in device. Not all devices are eligible for credit. You must be at least 18 years old to be eligible to trade in for credit or for an Apple Gift Card. Trade-in value may be applied toward qualifying new device purchase, or added to an Apple Gift Card. Actual value awarded is based on receipt of a qualifying device matching the description provided when estimate was made. Sales tax may be assessed on full value of a new device purchase. In-store trade-in requires presentation of a valid photo ID (local law may require saving this information). Offer may not be available in all stores, and may vary between in-store and online trade-in. Some stores may have additional requirements. Apple or its trade-in partners reserve the right to refuse or limit quantity of any trade-in transaction for any reason. More details are available from Apple’s 
+                <li href="#" >1. Trade-in values will vary based on the condition, year, and configuration of your eligible trade-in device. Not all devices are eligible for credit. You must be at least 18 years old to be eligible to trade in for credit or for an Apple Gift Card. Trade-in value may be applied toward qualifying new device purchase, or added to an Apple Gift Card. Actual value awarded is based on receipt of a qualifying device matching the description provided when estimate was made. Sales tax may be assessed on full value of a new device purchase. In-store trade-in requires presentation of a valid photo ID (local law may require saving this information). Offer may not be available in all stores, and may vary between in-store and online trade-in. Some stores may have additional requirements. Apple or its trade-in partners reserve the right to refuse or limit quantity of any trade-in transaction for any reason. More details are available from Apple’s 
                 trade-in partner for trade-in and recycling of eligible devices. Restrictions and limitations 
-                may apply.</span</li>
+                may apply.</li>
             
                 <li href="#" >Available in the U.S. on 
                     apple.com
@@ -327,155 +309,6 @@
             </ul>
         </div>
     <div>
-
-
-        <!-- footnote that have a nav and span -->
-        <!-- <section class=" w-screen border-t-2 pt-5 border-gray-300 hidden md:block max-w-screen-lg items-center justify-center"> -->
-        <section class="pr-2 justify-center hidden md:flex ">
-            <div class="grid grid-cols-5  max-w-screen-lg border-t-2 py-5">
-                <!-- row one -->
-                <div class="mr-5">
-                    <div class="text-xs mr-5 pb-2">
-                        <span class="pb-4 "> Shop and Learn</span>
-                            <ul class="text-gray-500 flex flex-col space-y-2 py-2">
-                                <a href="#">Store</a>
-                                <a href="#">Mac</a> 
-                                <a href="#">iPad</a>
-                                <a href="#">iPhone</a>
-                                <a href="#">Watch</a>
-                                <a href="#">Vision</a>
-                                <a href="#">Airpods</a>
-                                <a href="#">TV & Home</a>
-                                <a href="#">Airtag</a>
-                                <a href="#">Accessories</a>
-                            </ul>
-                        <span class="pb-4 ">Apple Wallet</span>
-                        <div class="text-xs mr-5 py-2">
-                            <ul class="text-gray-500 flex flex-col space-y-2 ">
-                                <a href="#">Wallet</a>
-                                <a href="#">Apple Card</a> 
-                                <a href="#">Apple Pay</a>
-                                <a href="#">Apple Cash</a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- row two -->
-                <div>
-                    <div class="text-xs mr-5 pb-2">
-                        <span class="pb-4 ">Account</span>
-                            <ul class="text-gray-500 flex flex-col space-y-2 py-2">
-                                <a  href="#">Manage Your Apple ID</a>
-                                <a  href="#">Apple Store Account</a> 
-                                <a  href="#">iCloud.com</a>
-                            </ul>
-                        <span class="pb-4 ">Entertainment</span>
-                        <div class="text-xs mr-5 py-2">
-                            <ul class="text-gray-500 flex flex-col space-y-2 ">
-                                <a  href="#">Apple One</a>
-                                <a  href="#">Apple TV+</a> 
-                                <a href="#">Apple Music</a>
-                                <a  href="#">Apple Arcade</a>
-                                <a  href="#">Apple Fitness+</a>
-                                <a  href="#">Apple Podcasts</a>
-                                <a  href="#">Apple News+</a> 
-                                <a  href="#">Apple Books</a>
-                                <a href="#">Apple Store</a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- row three -->
-                <div>
-                    <div class="text-xs mr-5 pb-2">
-                
-                        <span class="pb-4 ">Apple Store</span>
-                        <div class="text-xs mr-5 py-2">
-                            <ul class="text-gray-500 flex flex-col space-y-2 ">
-                                <a  href="#">Find a Store</a>
-                                <a  href="#">Genius bar</a> 
-                                <a  href="#">Today at Apple</a>
-                                <a  href="#">Group Reservation</a>
-                                <a  href="#">Apple Camp</a>
-                                <a  href="#">Apple Store App</a>
-                                <a  href="#">Certified Refurbished</a> 
-                                <a  href="#">Apple Trade in</a>
-                                <a  href="#">Financing</a>
-                                <a  href="#">Carrier Deals at Apple</a> 
-                                <a  href="#">Order Status</a>
-                                <a  href="#">Shopping Help</a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- row four -->
-                <div>
-                    <div class="text-xs mr-5 pb-2">
-                        <span class="pb-4 ">For Business</span>
-                            <ul class="text-gray-500 flex flex-col space-y-2 py-2">
-                                <a  href="#">Apple and Business</a>
-                                <a  href="#">Shop for Business</a> 
-                                
-                            </ul>
-                        <span class="pb-4 ">For Education</span>
-                        <div class="text-xs mr-5 py-2">
-                            <ul class="text-gray-500 flex flex-col space-y-2 ">
-                                <a  href="#">Apple and Education</a>
-                                <a  href="#">Shop for K-12</a> 
-                                <a  href="#">Shop for College</a>
-                    
-                            </ul>
-                        </div>
-                        <span class="pb-4 ">For Healthcare</span>
-                            <ul class="text-gray-500 flex flex-col space-y-2 py-2">
-                                <a  href="#">Apple in Healthcare</a>
-                                <a  href="#">Health on Apple Watch</a> 
-                                <a  href="#">Health record on iPhone</a> 
-                            </ul>
-                        <span class="pb-4 ">For Government</span>
-                        <div class="text-xs mr-5 py-2">
-                            <ul class="text-gray-500 flex flex-col space-y-2 ">
-                                <a  href="#">Shop for Government</a> 
-                                <a  href="#">Shop for Veterans and Military</a>
-                    
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- row five -->
-                <div>
-                    <div class="text-xs mr-5 pb-2">
-                        <span class="pb-4 ">Apple Value</span>
-                            <ul class="text-gray-500 flex flex-col space-y-2 py-2">
-                                <a  href="#">Accessibility</a>
-                                <a href="#">Education</a> 
-                                <a  href="#">Environment</a>
-                                <a  href="#">Inclusion and Diversity</a>
-                                <a  href="#">Privacy</a> 
-                                <a  href="#">Racial Equity and Justice</a>
-                                <a  href="#">Supply Chain </a>
-                                
-                            </ul>
-                        <span class="pb-4 ">About Apple</span>
-                        <div class="text-xs mr-5 py-2">
-                            <ul class="text-gray-500 flex flex-col space-y-2 ">
-                                <a  href="#">Newsroom</a>
-                                <a  href="#">Apple Leadership</a> 
-                                <a  href="#">Career Opportunities</a>
-                                <a  href="#">Investors</a>
-                                <a  href="#">Ethics & Compliance</a>
-                                <a  href="#">Events</a>
-                                <a  href="#">Contact Apple</a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     <footer-component></footer-component>
     <script src="/scripts/main.js"></script>
     <script src="/scripts/Script.js" type="module"></script>

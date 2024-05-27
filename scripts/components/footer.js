@@ -5,6 +5,153 @@ export class Footer extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = ` 
+        <!-- footnote that have a nav and span -->
+        <!-- <section class=" w-screen border-t-2 pt-5 border-gray-300 hidden md:block max-w-screen-lg items-center justify-center"> -->
+        <section class="pr-2 justify-center hidden md:flex ">
+            <div class="grid grid-cols-5  max-w-screen-lg border-t-2 py-5">
+                <!-- row one -->
+                <div class="mr-5">
+                    <div class="text-xs mr-5 pb-2">
+                        <span class="pb-4 "> Shop and Learn</span>
+                            <ul class="text-gray-500 flex flex-col space-y-2 py-2">
+                                <a href="#">Store</a>
+                                <a href="#">Mac</a> 
+                                <a href="#">iPad</a>
+                                <a href="#">iPhone</a>
+                                <a href="#">Watch</a>
+                                <a href="#">Vision</a>
+                                <a href="#">Airpods</a>
+                                <a href="#">TV & Home</a>
+                                <a href="#">Airtag</a>
+                                <a href="#">Accessories</a>
+                            </ul>
+                        <span class="pb-4 ">Apple Wallet</span>
+                        <div class="text-xs mr-5 py-2">
+                            <ul class="text-gray-500 flex flex-col space-y-2 ">
+                                <a href="#">Wallet</a>
+                                <a href="#">Apple Card</a> 
+                                <a href="#">Apple Pay</a>
+                                <a href="#">Apple Cash</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- row two -->
+                <div>
+                    <div class="text-xs mr-5 pb-2">
+                        <span class="pb-4 ">Account</span>
+                            <ul class="text-gray-500 flex flex-col space-y-2 py-2">
+                                <a  href="#">Manage Your Apple ID</a>
+                                <a  href="#">Apple Store Account</a> 
+                                <a  href="#">iCloud.com</a>
+                            </ul>
+                        <span class="pb-4 ">Entertainment</span>
+                        <div class="text-xs mr-5 py-2">
+                            <ul class="text-gray-500 flex flex-col space-y-2 ">
+                                <a  href="#">Apple One</a>
+                                <a  href="#">Apple TV+</a> 
+                                <a href="#">Apple Music</a>
+                                <a  href="#">Apple Arcade</a>
+                                <a  href="#">Apple Fitness+</a>
+                                <a  href="#">Apple Podcasts</a>
+                                <a  href="#">Apple News+</a> 
+                                <a  href="#">Apple Books</a>
+                                <a href="#">Apple Store</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- row three -->
+                <div>
+                    <div class="text-xs mr-5 pb-2">
+                
+                        <span class="pb-4 ">Apple Store</span>
+                        <div class="text-xs mr-5 py-2">
+                            <ul class="text-gray-500 flex flex-col space-y-2 ">
+                                <a  href="#">Find a Store</a>
+                                <a  href="#">Genius bar</a> 
+                                <a  href="#">Today at Apple</a>
+                                <a  href="#">Group Reservation</a>
+                                <a  href="#">Apple Camp</a>
+                                <a  href="#">Apple Store App</a>
+                                <a  href="#">Certified Refurbished</a> 
+                                <a  href="#">Apple Trade in</a>
+                                <a  href="#">Financing</a>
+                                <a  href="#">Carrier Deals at Apple</a> 
+                                <a  href="#">Order Status</a>
+                                <a  href="#">Shopping Help</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- row four -->
+                <div>
+                    <div class="text-xs mr-5 pb-2">
+                        <span class="pb-4 ">For Business</span>
+                            <ul class="text-gray-500 flex flex-col space-y-2 py-2">
+                                <a  href="#">Apple and Business</a>
+                                <a  href="#">Shop for Business</a> 
+                                
+                            </ul>
+                        <span class="pb-4 ">For Education</span>
+                        <div class="text-xs mr-5 py-2">
+                            <ul class="text-gray-500 flex flex-col space-y-2 ">
+                                <a  href="#">Apple and Education</a>
+                                <a  href="#">Shop for K-12</a> 
+                                <a  href="#">Shop for College</a>
+                    
+                            </ul>
+                        </div>
+                        <span class="pb-4 ">For Healthcare</span>
+                            <ul class="text-gray-500 flex flex-col space-y-2 py-2">
+                                <a  href="#">Apple in Healthcare</a>
+                                <a  href="#">Health on Apple Watch</a> 
+                                <a  href="#">Health record on iPhone</a> 
+                            </ul>
+                        <span class="pb-4 ">For Government</span>
+                        <div class="text-xs mr-5 py-2">
+                            <ul class="text-gray-500 flex flex-col space-y-2 ">
+                                <a  href="#">Shop for Government</a> 
+                                <a  href="#">Shop for Veterans and Military</a>
+                    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- row five -->
+                <div>
+                    <div class="text-xs mr-5 pb-2">
+                        <span class="pb-4 ">Apple Value</span>
+                            <ul class="text-gray-500 flex flex-col space-y-2 py-2">
+                                <a  href="#">Accessibility</a>
+                                <a href="#">Education</a> 
+                                <a  href="#">Environment</a>
+                                <a  href="#">Inclusion and Diversity</a>
+                                <a  href="#">Privacy</a> 
+                                <a  href="#">Racial Equity and Justice</a>
+                                <a  href="#">Supply Chain </a>
+                                
+                            </ul>
+                        <span class="pb-4 ">About Apple</span>
+                        <div class="text-xs mr-5 py-2">
+                            <ul class="text-gray-500 flex flex-col space-y-2 ">
+                                <a  href="#">Newsroom</a>
+                                <a  href="#">Apple Leadership</a> 
+                                <a  href="#">Career Opportunities</a>
+                                <a  href="#">Investors</a>
+                                <a  href="#">Ethics & Compliance</a>
+                                <a  href="#">Events</a>
+                                <a  href="#">Contact Apple</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- visible in mobile -->
         <section class="pt-5 min-[830px]:hidden">
             <div class="border-b-2  accordion-item border-zinc-300  ">

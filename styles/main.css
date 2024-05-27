@@ -55,3 +55,16 @@ body {
 .render-image{
     image-rendering: high-quality;
 }
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+.scroller__inner {
+    animation: scroll var(--_animation-duration) var(--_animation-play-state, running) var(--_animation-direction, forwards) linear infinite;
+}
+.scroller {
+    --_animation-direction: forwards;
+    --_animation-duration: 60s;
+}
