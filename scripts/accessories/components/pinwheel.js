@@ -39,9 +39,7 @@ class PinwheelCarousel extends HTMLElement {
     connectedCallback() {
         const dataArray = JSON.parse(this.getAttribute('data-array'));
         const totalSlides = dataArray.length;
-        console.log(totalSlides)
-
-        this.className = 'carousel relative overflow-hidden flex w-full flex-col items-center pb-5';
+        this.className = 'carousel relative overflow-hidden flex w-screen flex-col items-center pb-5';
 
         this.carouselItems = document.createElement('div'); // Assign created element to this.carouselItems
         this.carouselItems.className = 'carouselItems flex transition-transform duration-500';

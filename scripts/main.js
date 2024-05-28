@@ -42,18 +42,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     accordionHeaders.forEach(header => {
         header.addEventListener('click', () => {
-            // Remove bg-sky-300 from all headers
             accordionHeaders.forEach(otherHeader => {
                 otherHeader.classList.remove('bg-sky-200');
             });
 
-            // Add bg-sky-300 to the clicked header
             header.classList.add('bg-sky-200');
 
-            // Set a timeout to remove bg-sky-300 after 3 seconds
             setTimeout(() => {
                 header.classList.remove('bg-sky-200');
-            }, 60); // 3000 milliseconds = 3 seconds
+            }, 60); 
         });
     });
 });
@@ -131,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const dropdownText = document.getElementById('dropdownText');
     const dropdownMenu = document.getElementById('dropdownMenu');
-    console.log(dropdownMenu)
+
     const dropdownContent = dropdownMenu.querySelector('.dropdown-content');
 
     dropdownMenu.addEventListener('mouseenter', function () {
