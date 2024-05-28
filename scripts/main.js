@@ -76,16 +76,11 @@ const scrollers = document.querySelectorAll(".scroller");
 
     function addAnimation() {
     scrollers.forEach((scroller) => {
-        // add data-animated="true" to every `.scroller` on the page
         scroller.setAttribute("data-animated", true);
 
-        // Make an array from the elements within `.scroller-inner`
-        const scrollerInner = scroller.querySelector(".scroller__inner");
+        const scrollerInner = scroller.querySelector(".scroller_run");
         const scrollerContent = Array.from(scrollerInner.children);
 
-        // For each item in the array, clone it
-        // add aria-hidden to it
-        // add it into the `.scroller-inner`
         scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
         duplicatedItem.setAttribute("aria-hidden", true);
@@ -97,7 +92,7 @@ const scrollers = document.querySelectorAll(".scroller");
 // //Start & Pause Js
 document.addEventListener('DOMContentLoaded', function() {
     const toggleBtn = document.getElementById('toggleBtn');
-    const scroller = document.querySelector('.scroller__inner');
+    const scroller = document.querySelector('.scroller_run');
     const svgicon = document.getElementById('svgIcon')
 
     // Function to toggle the 'animate' class and adjust animation properties
@@ -112,7 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Resume the animation
             scroller.classList.add('animate');
             scroller.style.animationPlayState = 'running';
-            scroller.style.animationDuration = '60s';
             svgicon.src = '/assets/icons/pause-filled.svg'
             svgicon.classList.remove('h-[10px]');
         }
@@ -132,8 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const dropdownContent = dropdownMenu.querySelector('.dropdown-content');
 
     dropdownMenu.addEventListener('mouseenter', function () {
-        console.log('kel')
-        // Expanding dropdown
+
         dropdownMenu.classList.add('max-h-[500px]');
         // dropdownMenu.style.height = dropdownContent.scrollHeight + 'px';
     });

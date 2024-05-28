@@ -61,7 +61,7 @@ body {
         transform: translate(calc(-50% - 0.5rem));
     }
 }
-.scroller__inner {
+.scroller_run {
     animation: scroll var(--_animation-duration) var(--_animation-play-state, running) var(--_animation-direction, forwards) linear infinite;
 }
 .scroller {
