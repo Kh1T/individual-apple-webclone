@@ -19,7 +19,7 @@ export class NavBar extends HTMLElement {
                 <a href="#" class="relative" id="dropdownText">Store</a>
                 <div class="flex justify-center bg-zinc-50 absolute top-12 left-0
                             max-[830px]:w-screen dropdown 
-                            transition-all duration-300 opacity-0 max-h-0 overflow-hidden w-full" id="dropdownMenu">
+                            transition-all duration-300 opacity-0 h-0 overflow-hidden w-full" id="dropdownMenu">
                     <div class="dropdown-content flex flex-row py-14 w-screen justify-center pr-14">
                         <div class="pr-24">
                             <span class="flex h-5 w-[120px] text-xs text-slate-400">Shop</span>
@@ -115,7 +115,7 @@ export class NavBar extends HTMLElement {
             <a href="#" class="max-[830px]:hidden">
                 <svg height="48" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg"><path d="m13.4575 16.9268h-1.1353a3.8394 3.8394 0 0 0 -7.6444 0h-1.1353a2.6032 2.6032 0 0 0 -2.6 2.6v8.9232a2.6032 2.6032 0 0 0 2.6 2.6h9.915a2.6032 2.6032 0 0 0 2.6-2.6v-8.9231a2.6032 2.6032 0 0 0 -2.6-2.6001zm-4.9575-2.2768a2.658 2.658 0 0 1 2.6221 2.2764h-5.2442a2.658 2.658 0 0 1 2.6221-2.2764zm6.3574 13.8a1.4014 1.4014 0 0 1 -1.4 1.4h-9.9149a1.4014 1.4014 0 0 1 -1.4-1.4v-8.9231a1.4014 1.4014 0 0 1 1.4-1.4h9.915a1.4014 1.4014 0 0 1 1.4 1.4z"></path></svg>
             </a>
-            <a href="#" class="justify-center self-center max-[830px]:pr-3">
+            <a href="#" class="justify-center self-center max-[830px]:pr-3 md:hidden">
                 <svg width="18" height="18" viewBox="0 0 18 18"><polyline id="globalnav-menutrigger-bread-bottom" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" points="2 12, 16 12" class="globalnav-menutrigger-bread globalnav-menutrigger-bread-bottom"><animate id="globalnav-anim-menutrigger-bread-bottom-open" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"></animate><animate id="globalnav-anim-menutrigger-bread-bottom-close" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12"></animate></polyline><polyline id="globalnav-menutrigger-bread-top" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" points="2 5, 16 5" class="globalnav-menutrigger-bread globalnav-menutrigger-bread-top"><animate id="globalnav-anim-menutrigger-bread-top-open" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"></animate><animate id="globalnav-anim-menutrigger-bread-top-close" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5"></animate></polyline></svg>
             </a>
             
@@ -126,3 +126,34 @@ export class NavBar extends HTMLElement {
 }
 
 customElements.define("navbar-component", NavBar);
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  const dropdownText = document.getElementById("dropdownText");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+  let timer;
+
+  dropdownText.addEventListener("mouseenter", () => {
+    clearTimeout(timer);
+    dropdownMenu.style.height = dropdownMenu.scrollHeight + "px";
+    dropdownMenu.style.opacity = "1";
+  });
+
+  dropdownText.addEventListener("mouseleave", () => {
+    timer = setTimeout(() => {
+      dropdownMenu.style.height = "0";
+      dropdownMenu.style.opacity = "0";
+    }, 500);
+  });
+
+  dropdownMenu.addEventListener("mouseenter", () => {
+    clearTimeout(timer);
+    dropdownMenu.style.height = dropdownMenu.scrollHeight + "px";
+    dropdownMenu.style.opacity = "1";
+  });
+
+  dropdownMenu.addEventListener("mouseleave", () => {
+    dropdownMenu.style.height = "0";
+    dropdownMenu.style.opacity = "0";
+  });
+});
+

@@ -167,7 +167,7 @@ export class Footer extends HTMLElement {
         </section>
 
         <!-- footer bottom -->
-        <section class="w-full flex justify-center">
+        <section class="w-full flex justify-center px-3">
             <div class="inline-block text-xs text-zinc-400 font-light max-w-screen-lg w-full item-center border-zinc-300 ">
                 <div class=" min-[830px]:border-b-2 pt-5 py-2 min-[830px]:py-5">
                     More ways to shop: <u><a href="#" class="text-blue-600">Find an Apple Store</u></a> or <a  href="#" class="text-blue-600">
