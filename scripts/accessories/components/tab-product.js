@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentHeight = container.clientHeight;
         const totalHeight = container.firstChild.children.length * itemHeight + 20 ; 
         container.style.height = currentHeight === totalHeight ? `${itemHeight * visibleItemCount}px` : `${totalHeight}px`; 
-        showAllBtn.textContent = currentHeight === totalHeight ? 'Show All ' : 'Show All '; 
+        showAllBtn.textContent = currentHeight === totalHeight ? 'Show All  ' : 'Show All '; 
     }
 
     const product = createProduct(productInfo, categoryInfo);
