@@ -33,7 +33,7 @@ customElements.define('pinwheel-generate', PinwheelGenerate);
 class PinwheelCarousel extends HTMLElement {
     constructor() {
         super();
-        this.carouselItems = null; // Initialize carouselItems as null
+        this.carouselItems = null;
     }
 
     connectedCallback() {
@@ -41,7 +41,7 @@ class PinwheelCarousel extends HTMLElement {
         const totalSlides = dataArray.length;
         this.className = 'carousel relative overflow-hidden flex w-screen flex-col items-center pb-5';
 
-        this.carouselItems = document.createElement('div'); // Assign created element to this.carouselItems
+        this.carouselItems = document.createElement('div'); 
         this.carouselItems.className = 'carouselItems flex transition-transform duration-500';
 
         dataArray.forEach(data => {
@@ -81,10 +81,9 @@ class PinwheelCarousel extends HTMLElement {
             });
         });
 
-        const initialOffset = (Math.floor(totalSlides / 2)-1)*10; // ((totalSlide/2)-1)*10
+        const initialOffset = (Math.floor(totalSlides / 2)-1)*10; 
         this.carouselItems.style.transform = `translateX(${initialOffset + 5}%)`;
 
-        // Set initial button state
         if (buttons.length > 0) {
             buttons[0].classList.add('bg-opacity-50');
         }
@@ -134,7 +133,7 @@ const pinInfo3 = [
 
 const createAndAppendElement = (data, containerId) => {
     const element = document.createElement('pinwheel-carousel');
-    element.setAttribute('data-array', JSON.stringify(data)); // Set the data array as an attribute
+    element.setAttribute('data-array', JSON.stringify(data)); 
     document.getElementById(containerId).appendChild(element);
 };
 

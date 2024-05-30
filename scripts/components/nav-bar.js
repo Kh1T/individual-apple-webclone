@@ -127,33 +127,32 @@ export class NavBar extends HTMLElement {
 
 customElements.define("navbar-component", NavBar);
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  const dropdownText = document.getElementById("dropdownText");
-  const dropdownMenu = document.getElementById("dropdownMenu");
-  let timer;
+    const dropdownText = document.getElementById("dropdownText");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    let timer;
 
-  dropdownText.addEventListener("mouseenter", () => {
-    clearTimeout(timer);
-    dropdownMenu.style.height = dropdownMenu.scrollHeight + "px";
-    dropdownMenu.style.opacity = "1";
-  });
+    dropdownText.addEventListener("mouseenter", () => {
+        clearTimeout(timer);
+        dropdownMenu.style.height = dropdownMenu.scrollHeight + "px";
+        dropdownMenu.style.opacity = "1";
+    });
 
-  dropdownText.addEventListener("mouseleave", () => {
-    timer = setTimeout(() => {
-      dropdownMenu.style.height = "0";
-      dropdownMenu.style.opacity = "0";
-    }, 500);
-  });
+    dropdownText.addEventListener("mouseleave", () => {
+        timer = setTimeout(() => {
+        dropdownMenu.style.height = "0";
+        dropdownMenu.style.opacity = "0";
+        }, 500);
+    });
 
-  dropdownMenu.addEventListener("mouseenter", () => {
-    clearTimeout(timer);
-    dropdownMenu.style.height = dropdownMenu.scrollHeight + "px";
-    dropdownMenu.style.opacity = "1";
-  });
+    dropdownMenu.addEventListener("mouseenter", () => {
+        clearTimeout(timer);
+        dropdownMenu.style.height = dropdownMenu.scrollHeight + "px";
+        dropdownMenu.style.opacity = "1";
+    });
 
-  dropdownMenu.addEventListener("mouseleave", () => {
-    dropdownMenu.style.height = "0";
-    dropdownMenu.style.opacity = "0";
-  });
-});
+    dropdownMenu.addEventListener("mouseleave", () => {
+        dropdownMenu.style.height = "0";
+        dropdownMenu.style.opacity = "0";
+    });
+
 

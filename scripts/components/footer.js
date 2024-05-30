@@ -213,7 +213,7 @@ function createAccordionItem(title, links) {
     `;
 
     const content = document.createElement('ul');
-    content.className = 'text-gray-500 space-y-2 accordion-content hidden flex text-sm flex-col pb-5';
+    content.className = 'text-gray-500 space-y-2 accordion-content hidden flex text-sm flex-col pb-5 pt-2 pl-5';
 
     links.forEach(linkText => {
         const link = document.createElement('a');
@@ -394,4 +394,35 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeAccordion("accordion-container-10", accordionData10);
     initializeAccordion("accordion-container-11", accordionData11);
     
+});
+
+const accordionItems = document.querySelectorAll(".accordion-item");
+
+accordionItems.forEach((item) => {
+  const header = item.querySelector(".accordion-header");
+  const content = item.querySelector(".accordion-content");
+  const svgElement = item.querySelector(".rotate-svg");
+
+  header.addEventListener("click", () => {
+    const allSvgElements = document.querySelectorAll(".rotate-svg");
+    allSvgElements.forEach((svg) => {
+      if (svg !== svgElement) {
+        svg.classList.remove("rotate-180");
+      }
+    });
+
+    accordionItems.forEach((otherItem) => {
+      if (otherItem !== item) {
+        otherItem.classList.remove("active");
+        const otherContent = otherItem.querySelector(".accordion-content");
+        otherContent.classList.add("hidden");
+      }
+    });
+
+    item.classList.toggle("active");
+    item.classList.toggle("bg-transparent");
+    content.classList.toggle("hidden");
+
+    svgElement.classList.toggle("rotate-180");
+  });
 });
