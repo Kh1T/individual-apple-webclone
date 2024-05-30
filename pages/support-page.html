@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel = 'icon' type="icon" href="../assets/icons/favicon.ico">
+    <title>Support</title>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+    <div class="grid grid-cols-2 justify-center">
+      <!-- banner -->
+      <div class="col-span-2">
+        <img
+          id="responsiveImage"
+          class="max-h-[540px] md:object-cover lg:w-full "
+          src="../assets/support/hero-banner-lg.jpg"
+        />
+      </div>
+      <div class="text-center col-span-2 lg:w-[692px] xl:w-[980px] mx-auto">
+        <h1 class="text-[40px] md:text-5xl font-semibold mt-12">
+          Apple Support
+        </h1>
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 xl:grid-rows-1 xl:grid-cols-7 mt-3 items-center mx-6 space-y-10"
+        >
+          <div
+            class="grid items-center text-center justify-center w-11/12 gap-3 pt-10"
+          >
+            <div class="flex justify-center h-[68px]">
+              <img class="" src="/assets/support/image-grid-iphone.png" />
+            </div>
+            <a href="#" class="text-center text-base">iPhone</a>
+          </div>
+
+          <div
+            class="grid items-center text-center justify-center w-11/12 gap-3"
+          >
+            <div class="flex justify-center h-[68px]">
+              <img class="" src="/assets/support/image-grid-mac.png" />
+            </div>
+            <a href="#" class="text-center text-base">Mac</a>
+          </div>
+          <div
+            class="grid items-center text-center justify-center w-11/12 gap-3"
+          >
+            <div class="flex justify-center h-[68px]">
+              <img class="" src="/assets/support/image-grid-ipad.png" />
+            </div>
+            <a href="#" class="text-center ">iPad</a>
+          </div>
+          <div
+            class="grid items-center text-center justify-center w-11/12 gap-3"
+          >
+            <div class="flex justify-center h-[68px]">
+              <img class="" src="/assets/support/image-grid-watch.png" />
+            </div>
+            <a href="#" class="text-center text-base">Watch</a>
+          </div>
+          <div
+            class="grid items-center text-center justify-center w-11/12 gap-3"
+          >
+            <div class="flex justify-center h-[68px]">
+              <img
+                class=""
+                src="/assets/support/image-grid-apple-vision-pro.png"
+              />
+            </div>
+            <a href="#" class="text-center text-base">Vision</a>
+          </div>
+          <div
+            class="grid items-center text-center justify-center w-11/12 gap-3"
+          >
+            <div class="flex justify-center h-[68px]">
+              <img class="" src="/assets/support/image-grid-airpods.png" />
+            </div>
+            <a href="#" class="text-center text-base">Airpods</a>
+          </div>
+          <div
+            class="grid items-center text-center justify-center w-11/12 gap-3"
+          >
+            <div class="flex justify-center h-[68px]">
+              <img class="" src="/assets/support/image-grid-tv.png" />
+            </div>
+            <a href="#" class="text-center text-base">TV</a>
+          </div>
+        </div>
+        <div
+          class="md:grid md:grid-cols-2 xl:grid-cols-3 py-16 lg:px-0 md:space-x-8 space-y-8"
+        >
+          <div
+            class="flex flex-col items-center justify-center py-9 bg-zinc-100 rounded-3xl shadow-xl md:mt-8 md:ml-8"
+          >
+            <div class="mb-5">
+              <img
+                class="h-[60px]"
+                src="/assets/support/tile-password.svg"
+              />
+            </div>
+            <a href="#" class="pb-2 text-blue-600 font-light" href="#"
+              >Forgot Apple ID password</a
+            >
+          </div>
+          <div
+            class="flex flex-col items-center justify-center py-9 bg-zinc-100 rounded-3xl shadow-xl"
+          >
+            <div class="mb-5">
+              <img
+                class="h-[60px]"
+                src="/assets/support/tile-billing.svg"
+              />
+            </div>
+            <a href="#" class="pb-2 text-blue-600 font-light" href="#"
+              >Apple Repair</a
+            >
+          </div>
+          <div
+            class="flex flex-col items-center justify-center py-9 bg-zinc-100 rounded-3xl shadow-xl"
+          >
+            <div class="mb-5">
+              <img
+                class="h-[60px]"
+                src="/assets/support/tile-repair.svg"
+              />
+            </div>
+            <a href="#" class="pb-2 text-blue-600 font-light" href="#"
+              >Billing and subscriptions</a
+            >
+          </div>
+          <div
+            class="hidden md:invisible lg:hidden xl:hidden md:flex flex-col items-center justify-center py-9 bg-zinc-100 rounded-3xl shadow-xl"
+          >
+            <div class="mb-5">
+              <img
+                class="h-[60px]"
+                src="/assets/support/tile-repair.svg"
+              />
+            </div>
+            <a href="#" class="pb-2 text-blue-600 font-light" href="#"
+              >Billing and subscriptions</a
+            >
+          </div>
+
+          <div
+            class="grid  lg:w-full col-span-2 xl:col-span-3 mx-auto pt-16"
+          >
+            <h2 class="font-semibold text-2xl md:text-3xl lg:pb-8">
+              Search for more topics
+            </h2>
+            <div class="grid grid-cols-">
+              <input
+                class="px-12 py-4 my-4 mx-3 md:mr-16 border-2 rounded-2xl relative text-base"
+                type="text"
+                placeholder="Search Support"
+              />
+              <img
+                class="h-8 absolute mt-[35px] mx-8"
+                src="/assets/support/search-icon.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- banner-row -->
+      <div
+        class="flex flex-col col-span-2 bg-zinc-100 p-[0.5px] justify-center items-center text-center"
+      >
+        <div
+          class="flex flex-col bg-white rounded-3xl m-5 gap-5 lg:w-[692px] xl:w-[980px]"
+        >
+          <div class="pt-10 px-[8.33%] space-y-4">
+            <h2 class="font-semibold text-3xl">Apple Support on Youtube</h2>
+            <p class="text-lg font-light pb-4">
+              Check out our official YouTube channel to help you get the most
+              from your Apple devices and services.
+            </p>
+            <a href="#" class="text-blue-600"
+              >Visit Apple Support on Youtube
+            </a>
+          </div>
+          <picture>
+            <source
+              srcset="
+                ../assets/support/tile-feature-youtube-sm.png
+              "
+              media="(max-width: 1023px)"
+            />
+            <source
+              srcset="
+                ../assets/support/tile-feature-youtube-lg.png
+              "
+            />
+            <img
+              class="rounded-3xl lg:w-[6920px] lg:h-[369px] lg:object-cover lg:overflow-hidden"
+              src="../assets/support/tile-feature-youtube-sm.png"
+            />
+          </picture>
+        </div>
+        <div
+          class="flex flex-col bg-white rounded-3xl m-5 gap-8 lg:w-[692px] xl:w-[980px]"
+        >
+          <div class="pt-10 px-[8.33%] space-y-4">
+            <h2 class="font-semibold text-3xl">
+              Join free sessions at your Apple Store
+            </h2>
+            <p class="text-lg font-light pb-4">
+              Learn about the latest features and how to go further with your
+              Apple devices.
+            </p>
+            <a href="#" class="text-blue-600">Sign up ></a>
+          </div>
+          <picture>
+            <source
+              srcset="
+                ../assets/support/tile-feature-fundamentals-sm.png
+              "
+              media="(max-width: 1023px)"
+            />
+            <source
+              srcset="
+                ../assets/support/tile-feature-fundamentals-lg.png
+              "
+            />
+            <img
+              class="rounded-b-3xl lg:w-[6920px] lg:h-[369px] lg:object-cover lg:overflow-hidden"
+              src="../assets/support/tile-feature-fundamentals-sm.png"
+            />
+          </picture>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-12 md:space-x-5">
+          <div
+            class="flex flex-col pt-5 lg:col-span-8 items-center overflow-hidden"
+          >
+            <div
+              class="pt-10 xl:flex xl:flex-col md:py-0 xl:py-0 px-[8.33%] bg-white space-y-2"
+            >
+              <div
+                class=" xl:w-[50vw] flex self-center flex-col py-10 bg-white px-[8.33%] xl:px-0 space-y-4 text- [17px]"
+              >
+                <h2 class="font-semibold text-3xl">Get Support</h2>
+                <div
+                  class="grid items-center pl-[100px] md:px-[140px] md:text-center"
+                >
+                  <p class="flex text-lg font-light pb-4">
+                    Give us a few details and we’ll offer the best solution.
+                    <br class="md:hidden" />Connect by phone, chat, email, and
+                    more.
+                  </p>
+                </div>
+                <a
+                  href="#"
+                  class="xl:w-[150px] flex self-center bg-slate-900 text-zinc-50 rounded-3xl px-5 py-3 text-lg"
+                >
+                  <p class="mx-4">Start now</p>
+                </a>
+              </div>
+              <picture
+                class="bg-white md:h-[300px] w-[734px] h-[223px] object-cover xl:w-[1440px] flex xl:pl-10"
+              >
+                <source
+                  srcset="
+                    ../assets/support/tile-split-getsupport-sm.png
+                  "
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ../assets/support/tile-split-getsupport-lg.png
+                  "
+                />
+                <img
+                  class="md:object-cover"
+                  src="../assets/support/tile-split-getsupport-sm.png"
+                  alt="Flowers"
+                />
+              </picture>
+            </div>
+          </div>
+          <div
+            class="flex flex-col lg:col-span-4 max-sm:py-4 lg:bg-white lg:space-y-7 justify-center items-center mt-5 md:pb-4 lg:pb-0 lg:px-0"
+          >
+          
+            <div
+              class="flex flex-col py-10 bg-white px-[8.33%] space-y-4 text-[17px] md:pb-20 lg:pb-10"
+            >
+              <h2 class="font-semibold text-3xl md:pb-4 lg:pb-0">
+                Apple Support app
+              </h2>
+              <p class="text-lg font-light pb-4">
+                Get help for all of your Apple products in one place, or connect
+                with an expert.
+              </p>
+              <a href="#" class="text-blue-600">Download</a>
+              <p>
+                <a href="#" class="text-blue-600"
+                  >Get to know the Apple Support app</a
+                >
+              </p>
+            </div>
+            <div class="bg-white w-full flex justify-center lg:w-">
+              <img
+                class="h-[250px] w-[250px] object-cover md:h-[262px] lg:h-[262px] md:w-fit"
+                src="../assets/support/tile-split-supportapp-sm.png"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col bg-white rounded-3xl m-5 gap-5 mt-16 md:w-[692px] xl:w-[980px]"
+        >
+          <div class="py-10 px-[8.33%] space-y-4">
+            <h2 class="font-semibold text-3xl">My Support</h2>
+            <p class="text-lg font-light pb-4">
+              Get warranty information, check your coverage status, or look up
+              an existing repair.
+            </p>
+            <a href="#" class="text-blue-600">Sign in with your Apple ID > </a>
+          </div>
+        </div>
+        <div
+          class="flex flex-col bg-white rounded-3xl m-5 gap-5 mt-16 md:w-[692px] xl:w-[980px]"
+        >
+          <div class="pt-10 px-[8.33%] space-y-4">
+            <h2 class="font-semibold text-3xl">AppleCare+</h2>
+            <p class="text-lg font-light pb-4">
+              Get unlimited repairs for accidental damage protection, 24/7
+              priority access to Apple experts, and more.
+            </p>
+            <a href="#" class="text-blue-600">Learn more > </a>
+          </div>
+          <img
+            class="rounded-3xl"
+            src="../assets/support/tile-feature-applecare-plus-sm.png"
+          />
+        </div>
+        <div
+          class="flex flex-col bg-white rounded-3xl m-5 gap-5 mt-16 md:w-[692px] xl:w-[980px]"
+        >
+          <div class="pt-10 px-[8.33%] space-y-4">
+            <h2 class="font-semibold text-3xl">Apple Trade In</h2>
+            <p class="text-lg font-light pb-4">
+              Turn an eligible device into credit towards a new one, or recycle
+              it for free.
+            </p>
+            <a href="#" class="text-blue-600">Learn more > </a>
+          </div>
+          <img
+            class="rounded-3xl"
+            src="../assets/support/tile-feature-appletradein-sm.png"
+          />
+        </div>
+        <div
+          class="flex flex-col bg-white rounded-3xl m-5 gap-5 lg:w-[692px] xl:w-[980px]"
+        >
+          <div class="py-10 px-[8.33%] space-y-4">
+            <h2 class="font-semibold text-2xl">Safe and reliable repairs</h2>
+            <p class="text-lg font-light pb-4">
+              At Apple, every product we make is built to last. We design
+              durable, easy-to-use devices with innovative features that
+              customers depend on, all while protecting their privacy and data.
+              Customers should have access to safe, reliable, and secure repairs
+              with genuine Apple parts if they need them.
+            </p>
+            <p>
+              Learn more about Apple’s approach to expanding access to safe and
+              reliable repairs.
+            </p>
+            <a href="#" class="text-blue-600">Sign in with your Apple ID > </a>
+          </div>
+        </div>
+        <div class="md:grid md:grid-cols-2 md:space-x-5 md:mr-5">
+          <div class="flex flex-col text-start bg-white rounded-3xl m-5 gap-5">
+            <div class="py-10 px-[8.33%] space-y-4">
+              <h2 class="font-semibold text-2xl">
+                Beware of counterfeit parts
+              </h2>
+              <p class="text-lg font-light pb-4">
+                Some counterfeit and third party power adapters and batteries
+                may not be designed properly and could result in safety issues.
+                To ensure you receive a genuine Apple battery during a battery
+                replacement, we recommend visiting an
+                <a class="text-blue-600" href="#">Apple Store</a> or
+                <a class="text-blue-600" href="#"
+                  >Apple Authorized Service Provider</a
+                >
+                .If you need a replacement adapter to charge your Apple device,
+                we recommend getting an Apple power adapter.
+              </p>
+              <p class="text-lg font-light pb-4">
+                Also non-genuine replacement displays may have compromised
+                visual quality and may fail to work correctly. Apple-certified
+                screen repairs are performed by trusted experts who use genuine
+                Apple parts.
+              </p>
+              <p class="md:hidden">
+                <a href="#" class="text-blue-600"
+                  >Sign in with your Apple ID >
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col text-start bg-white rounded-3xl m-5 gap-5">
+            <div class="py-10 px-[8.33%] space-y-4">
+              <img
+                class="w-16"
+                src="/assets/support/nav-icon-giftcard.svg"
+              />
+              <h2 class="font-semibold text-2xl">
+                Be aware of gift card scams
+              </h2>
+              <p class="text-lg font-light pb-4">
+                Be aware of scams involving Apple Gift Cards, App Store & iTunes
+                Gift Cards, and Apple Store Gift Cards.
+              </p>
+              <a href="#" class="text-blue-600">Learn more > </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="inline-block w-screen bg-white lg:grid lg:grid-cols-6 xl:grid-cols-8 lg:w-screen lg:bg-white text-start justify-center items-center"
+        >
+          <div
+            class="hidden lg:block xl:col-span-2 py-10 items-center pt-5 pb-[74px] px-[8.33%] space-y-4"
+          ></div>
+          <div
+            class="lg:col-span-3 xl:col-span-4 py-10 items-center pt-5 pb-[74px] px-[8.33%] xl:px-4 space-y-4"
+          >
+            <h2 class="font-semibold text-2xl">Apple Services Programs</h2>
+            <p>
+              <a href="#" class="text-blue-600"
+                >Apple Watch Series 6 Service Program for Blank Screen Issue</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-blue-600"
+                >iPhone 12 and iPhone 12 Pro Service Program for No Sound
+                Issues</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-blue-600"
+                >15-inch MacBook Pro Battery Recall Program</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-blue-600"
+                >Apple Three-Prong AC Wall Plug Adapter Recall Program</a
+              >
+            </p>
+            <p><a href="#" class="text-blue-600">See all programs</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer-component></footer-component>
+    
+    <script src="/scripts/index.js"></script>
+    <script src="/scripts/Script.js" type="module"></script>
+    <script src="/scripts/main.js"></script>
+  </body>
+</html>

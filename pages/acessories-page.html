@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>accessories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel = 'icon' type="icon" href="../assets/icons/favicon.ico">
+
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+        <section
+        class="max-w-screen flex flex-col w-screen items-center pt-10 bg-zinc-100"
+        >
+        <div class="relative overflow-hidden flex justify-center">
+            
+            <div
+            class="px-12 ml-5 md:ml-0 py-10 max-w-screen-lg absolute top-2 md:top-[80px] md:left-20 text-lg text-center md:text-start space-y-5"
+            >
+                <h2 class="text-4xl font-semibold">Mix. Match. MagSafe.</h2>
+                <p class="">Snap on a case, wallet, or wireless charger.</p>
+                <p class="text-blue-500">Shop MagSafe ></p>
+            </div>
+            <img
+            class="hidden md:block ml-[30%] h-[480px] object-cover"
+            src="../assets/accessories/accessory-header.png"
+            />
+            <img
+            class="md:hidden pt-10 bg-center object-cover size-[500px]"
+            src="../assets/accessories/accessory-header-sm.png"
+            />
+        </div>
+        </section>
+
+        <section class="max-w-screen relative flex flex-col items-center pt-20">
+        <span class="text-2xl font-medium w-4/5 md:w-full text-center py-5"
+            >Find the accessories you’re looking for.</span
+        >
+        <div></div>
+        <div class="relative">
+            <input
+            class="border w-80 md:w-full border-black pl-10 pr-20 md:pr-[23.5rem] md:px-10 py-5 rounded-xl flex text-start text-lg"
+            type="text"
+            placeholder="Search accessories"
+            />
+            <img
+            class="size-7 absolute top-5 ml-2"
+            src="../assets/icons/search-gray.svg"
+            />
+        </div>
+        </section>
+
+        <section class="w-screen-md relative flex flex-col items-center py-10">
+        <div class="flex gap-10 pb-6 border-b-2">
+            <a href="#"
+            ><button
+                id="product"
+                class="underline text-xl font-extralight underline-offset-[30px]"
+            >
+                Browse by Product
+            </button></a
+            >
+            <a href="#"
+            ><button
+                id="category"
+                class="text-xl font-extralight underline-offset-[30px]"
+            >
+                Browse by Catergory
+            </button></a
+            >
+        </div>
+        <div
+            class="max-w-screen-md overflow-hidden transition-all duration-500 ease-in-out "
+            id="product-container"
+        ></div>
+        <div
+            class="max-w-screen-md overflow-hidden hidden transition-all duration-500 ease-in-out"
+            id="category-container"
+        ></div>
+        <button id="see-all-btn" class="text-blue-500">Show All +</button>
+        </section>
+
+        <section class="max-w-screen flex flex-col items-center text-center">
+        <pinwheel-generate></pinwheel-generate>
+        </section>
+
+        <section class="flex my-20 w-screen items-center justify-center">
+        <div class="flex max-w-screen-xl flex-col md:flex-row">
+            <div class="flex flex-col text-center items-center mx-[10%] md:mx-10">
+            <img class="size-16" src="../assets/accessories/icon-truck.png" />
+            <h3 class="text-xl font-medium">Fast delivery or pickup</h3>
+            <p>
+                Enjoy two-hour delivery from an Apple Store, free delivery, or easy
+                pickup.
+            </p>
+            <p class="text-blue-500">Learn more ></p>
+            </div>
+            <div
+            class="flex flex-col text-center items-center my-[5%] md:my-0 md:mx-10"
+            >
+            <img class="size-16" src="../assets/accessories/icon-return.png" />
+            <h3 class="text-xl font-medium">Free and easy returns</h3>
+            <p>Complete your return online or take it to an Apple Store.</p>
+            <p class="text-blue-500">Learn more ></p>
+            </div>
+            <div class="flex flex-col text-center items-center mx-[10%] md:mx-10">
+            <img class="size-16" src="../assets/accessories/icon-applecard.png" />
+            <h3 class="text-xl font-medium">Buy with Apple Card.</h3>
+            <p>Get 3% Daily Cash back when you shop at Apple with Apple Card.</p>
+            <p class="text-blue-500">Learn more ></p>
+            </div>
+        </div>
+        </section>
+
+        <footer-component></footer-component>
+
+    <!-- <script src="/scripts/Script.js" type="module"></script> -->
+    <script src="../pages/accessories-page/components/index.js"></script>
+    <script src="/scripts/Script.js" type="module"></script>
+    <script src="../scripts/accessories/components/tab-product.js"></script>
+    <script src="../scripts/accessories/index.js"></script>
+    <script src="../scripts/accessories/components/pinwheel.js"></script>
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>

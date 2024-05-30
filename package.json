@@ -1,5 +1,7 @@
 {
   "devDependencies": {
-    "tailwindcss-image-rendering": "^1.0.2"
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "tailwindcss-image-rendering": "^0.1.0"
   }
 }
