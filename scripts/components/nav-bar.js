@@ -105,7 +105,7 @@ export class NavBar extends HTMLElement {
             <a href="#">TV & Home</a>
             <a href="#">Entertainment</a>
             <a href="/pages/acessories-page.html">Acessories</a>
-            <a href="./support-page.html">Support</a>
+            <a href="/pages/support-page.html">Support</a>
 
         </ul>
         <ul class="grid grid-flow-col space-x-6 px-4 ">
@@ -121,7 +121,7 @@ export class NavBar extends HTMLElement {
             
         </ul>
     </nav>
-        `
+        `;
     }
 }
 
