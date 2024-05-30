@@ -1,6 +1,7 @@
 # Clone-Apple-Project
 
-Link to Website(https://www.apple.com/)
+Link to Website (https://www.apple.com/)
+Link to Figma (https://www.figma.com/design/9MGCHNFttYM28ndOAfE5oa/Clone-Apple?node-id=0-1&t=h8VafpwCWGpkd4tS-1)
 
 ## Getting started
 
@@ -14,9 +15,9 @@ Link to Website(https://www.apple.com/)
 1. HTML (HyperText Markup Language):
 - Standard language for making the Website.
 2. CSS :
-- Use for styling the html.
+- Use for styling the html elements.
 3. Tailwind :
-- A design system use for implement pure CSS. Built-in class to use and had it own CSS style.
+- A design system use for implement pure CSS.Many variety Built-in class to use that has its own CSS style.
 4. Flowbite :
 - An open source library of UI component and capatible with tailwind.
 5. ECMAScript(Javascript) :
@@ -45,8 +46,8 @@ Link to Website(https://www.apple.com/)
 ## Git-Flow strategy
 ![Alt text](git-flow.png)
 
-## Contributing
+## Contributor
 
 Name Contributor : 
 Khom Khit (Developer)
-Team alphabeez member (Peer review)
+Team alphabeez members (Peer review)
