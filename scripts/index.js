@@ -10,7 +10,6 @@ function updateImageSource() {
     } else {
         responsiveImage.src = "../assets/support/hero-banner-lg.jpg";
     }
-    console.log(windowWidth)
 }
 
 
