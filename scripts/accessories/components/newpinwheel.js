@@ -168,6 +168,9 @@ class PinwheelGenerate extends HTMLElement {
       ],
     ];
 
+    /**
+     * Iterate over pinWheelData to create and append carousel items.
+     */
     pinWheelData.forEach((pinInfo, index) => {
       const element = document.createElement("div");
       element.classList.add(
@@ -190,6 +193,11 @@ class PinwheelGenerate extends HTMLElement {
     this.initializeCarousels();
   }
 
+  /**
+   * Returns the category title based on the provided index.
+   * @param {number} index - The index of the category.
+   * @returns {string} The category title.
+   */
   getCategoryTitle(index) {
     const categories = [
       "Featured iPad Accessories",
@@ -199,6 +207,11 @@ class PinwheelGenerate extends HTMLElement {
     return categories[index] || "Category";
   }
 
+  /**
+   * Initializes carousel navigation buttons and sets up event listeners.
+   * @param {HTMLElement} carousel - The carousel element.
+   * @param {HTMLElement} carouselItems - The carousel items container.
+   */
   initializeCarousels() {
     const carousels = this.querySelectorAll(".pinwheel-carousel");
     carousels.forEach((carousel) => {
@@ -278,6 +291,12 @@ class PinwheelGenerate extends HTMLElement {
     }
   }
 
+  /**
+   * Updates the carousel to show the selected slide.
+   * @param {number} slideIndex - The index of the slide to display.
+   * @param {NodeList} buttons - The navigation buttons.
+   * @param {HTMLElement} carouselItems - The carousel items container.
+   */
   updateCarousel(slideIndex, buttons, carouselItems) {
     const offset = -(slideIndex * 100);
     const totalSlides = buttons.length;
