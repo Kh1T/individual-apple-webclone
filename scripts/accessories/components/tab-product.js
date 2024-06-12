@@ -1,3 +1,8 @@
+/**
+ * Creates an HTML string for a product item link.
+ * @param {string} label - The label for the product item.
+ * @returns {string} The HTML string for the product item link.
+ */
 function createProductItem(label) {
   const imgSrc = `../assets/accessories/icon-${label.toLowerCase().replace(/ /g, "-")}.png`;
   return `
@@ -8,6 +13,11 @@ function createProductItem(label) {
     `;
 }
 
+/**
+ * Creates an HTML string for a list of product items.
+ * @param {string[]} productInfo - An array of product item labels.
+ * @returns {string} The HTML string for the list of product items.
+ */
 function createProduct(productInfo) {
   const productItemsHtml = productInfo
     .map((label) => createProductItem(label))
