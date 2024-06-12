@@ -61,7 +61,7 @@ export class NavBar extends HTMLElement {
                 <div class="flex justify-center bg-zinc-50 absolute top-12 left-0
                                 max-[830px]:w-screen dropdown 
                                 transition-all duration-300 opacity-0 max-h-0 overflow-hidden w-full" id="dropdownMenu">
-                        <div class="dropdown-content flex flex-row py-14 w-screen justify-center pr-14">
+                        <div class="dropdown-content flex flex-row py-14 w-screen justify-center pr-24">
                             <div class="pr-24">
                                 <span class="flex h-5 w-[120px] text-xs text-slate-400">Shop</span>
                                 <div class="grid text-3xl font-medium space-y-1 pb-20">
