@@ -1,4 +1,8 @@
 // banner javascript
+/**
+ * Gets the image element with the ID 'responsiveImage'.
+ * @type {HTMLElement}
+ */
 const responsiveImage = document.getElementById('responsiveImage');
 
 function updateImageSource() {
@@ -10,14 +14,16 @@ function updateImageSource() {
     } else {
         responsiveImage.src = "../assets/support/hero-banner-lg.jpg";
     }
-    console.log(windowWidth)
 }
 
 
 updateImageSource();
 
+
+/**
+ * Adds an event listener to the window object to call updateImageSource
+ * whenever the window is resized.
+ */
 window.addEventListener('resize', updateImageSource);
-
-
 
 
